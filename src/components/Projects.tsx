@@ -171,23 +171,6 @@ function Projects() {
     return stack.slice(0, 6)
   }
 
-  const getTechStack = (language: string | null, topics: string[]): string[] => {
-    const stack: string[] = []
-    
-    if (language) {
-      stack.push(language)
-    }
-    
-    // Add topics as tech stack items
-    topics.forEach(topic => {
-      if (!stack.includes(topic)) {
-        stack.push(topic.charAt(0).toUpperCase() + topic.slice(1))
-      }
-    })
-    
-    // Limit to 5 items
-    return stack.slice(0, 5)
-  }
 
   const formatDate = (dateString: string): string => {
     const date = new Date(dateString)

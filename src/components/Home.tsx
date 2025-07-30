@@ -1,4 +1,21 @@
+import { useState, useEffect } from 'react'
+
 function Home() {
+  const [currentTitle, setCurrentTitle] = useState(0)
+  const titles = ["Software Engineer", "Master Tinkerer"]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTitle((prev) => (prev + 1) % titles.length)
+    }, 4000) // Change every 4 seconds to match animation duration
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const getAnimationClass = (titleIndex: number) => {
+    return titleIndex === 0 ? 'typewriter-software' : 'typewriter-master'
+  }
+
   return (
     <section className="hero-section">
       <div className="profile-hero">
@@ -6,31 +23,29 @@ function Home() {
           <img src="/assets/profile.png" alt="Vedant Profile" />
         </div>
         <div className="profile-content">
-          <h1>Vedant</h1>
-          <p className="typewriter">Software Engineer</p>
+          <h2>Hi 👋 </h2>
+          <h1>I'm Vedant</h1>
+          <p key={currentTitle} className={`typewriter ${getAnimationClass(currentTitle)}`}>{titles[currentTitle]}</p>
         </div>
       </div>
       
       <div className="description">
         <p>
-          I turn creative ideas into powerful web applications <em>(quickly)</em> using modern technologies, 
-          focused on performance and user experience.
+          I'm a software engineer with over <strong>3 years of experience</strong> in building large scale systems and rapidly growing B2B SaaS products at Big Tech firms and startups. My expertise 
+          lies in developing massive throughput and highly available backend systems across variety of frameworks and cloud technologies.
+          I love working on challenging engineering problems with strong impact and core business values. 
         </p>
         
         <p>
-          Currently I am working as a Full Stack Developer at <strong>TechCorp</strong> building scalable web applications. 
-          I have built multiple projects in past 3 years. <strong>Passionate about clean code</strong> 
-          and building products that make a difference.
+          Currently, I am working as a <strong> Senior Software Engineer at Harness</strong> where I'm shipping features for <a href="https://www.harness.io/products/supply-chain-security" target="_blank"> Supply Chain Security</a> and <a href="https://www.harness.io/products/security-testing-orchestration" target="_blank"> Security Testing Orchestration</a> products, serving some of the industry's leading enterprises.
         </p>
         
         <p>
-          My go-to stack is ReactJS, TypeScript, Node.js, Python, PostgreSQL, 
-          MongoDB, and modern CSS frameworks.
+          My interests include backend engineering, databases, cloud, large language models (LLMs) and AI agents.
         </p>
         
         <p>
-          You can talk to me about <strong>web development, new technologies, coding, or anything else</strong>.
-          Say a Hi on <strong>X</strong>
+          Outside of work, I enjoy playing lawn tennis & football, reading books, watching movies & F1 and travelling. I'm a big DC fanboy and Star Wars nerd and would be up for a conversation always!
         </p>
       </div>
       

@@ -7,7 +7,7 @@ function Experience() {
       companyUrl: "https://www.harness.io/",
       period: "Mar 2025 - Present",
       logoUrl: "https://logo.clearbit.com/harness.io",
-      description: "Building SaaS products around Supply Chain Security and Security Testing Orchestration with > $2 million ARR.",
+      description: "Building SaaS products around Supply Chain Security and Security Testing Orchestration with > $12 million ARR.",
       responsibilities: [
         "Developed AI Agent with MCP integration to perform security workflows on customer's behalf using natural language.",
         "Redesigned underlying database of the product to serve high throughput writes and read queries with <100 ms latency.",

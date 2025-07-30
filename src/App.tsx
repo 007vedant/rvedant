@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-do
 import Home from './components/Home'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Bookshelf from './components/Bookshelf'
 import './App.css'
 
 function App() {
@@ -51,9 +52,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/blogs" element={<div className="page-placeholder"><h1>Blogs</h1><p>Coming soon...</p></div>} />
-            <Route path="/about" element={<div className="page-placeholder"><h1>About</h1><p>Coming soon...</p></div>} />
-            <Route path="/bookshelf" element={<div className="page-placeholder"><h1>Bookshelf</h1><p>Coming soon...</p></div>} />
+            <Route path="/blogs" element={<div className="page-placeholder"><h1>Still Cooking 👨‍🍳</h1></div>} />
+            <Route path="/bookshelf" element={<Bookshelf />} />
           </Routes>
         </main>
         

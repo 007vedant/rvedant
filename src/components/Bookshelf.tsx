@@ -329,7 +329,7 @@ function Bookshelf() {
               .filter(genre => genre !== 'all')
               .map(genre => (
                 <option key={genre} value={genre}>
-                  {genre?.charAt(0).toUpperCase() + genre?.slice(1).replace('-', ' ')} 
+                  {genre ? genre.charAt(0).toUpperCase() + genre.slice(1).replace('-', ' ') : ''} 
                   ({books.filter(b => b.genre === genre).length})
                 </option>
               ))

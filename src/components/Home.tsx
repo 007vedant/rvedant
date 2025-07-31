@@ -45,7 +45,7 @@ function Home() {
         </p>
         
         <p>
-          Outside of work, I enjoy playing lawn tennis & football, reading books, watching movies & F1 and travelling. I'm a big DC fanboy and Star Wars nerd and would be up for a conversation always!
+          Outside of work, I enjoy playing lawn tennis & football, reading books, watching movies & F1 and travelling. I'm a big <a href="https://starwarsintrogenerator.com/scroller?u=23oc3l53" target="_blank">Star Wars Nerd</a> and DC Fanboy and would be up for a conversation always!
         </p>
       </div>
       

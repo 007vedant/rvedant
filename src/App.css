@@ -305,6 +305,19 @@
   color: var(--text-primary);
 }
 
+.description a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.description a:hover {
+  border-bottom: 1px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
 .action-buttons {
   display: flex;
   gap: 1rem;
